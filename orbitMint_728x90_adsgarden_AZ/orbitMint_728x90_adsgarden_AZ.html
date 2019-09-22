@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta name="ad.size" content="width=728,height=90">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://s0.2mdn.net/ads/studio/cached_libs/easepack_2.0.1_min.js"></script>
+  <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenlite_2.0.1_min.js"></script>
+  <script src="https://s0.2mdn.net/ads/studio/cached_libs/cssplugin_2.0.1_min.js"></script>
+  <script src="https://s0.2mdn.net/ads/studio/cached_libs/timelinelite_2.0.1_min.js"></script>
+  <script type="text/javascript">
+    var clickTag = "#"; 
+    document.addEventListener("DOMContentLoaded", function(event) { 
+      TweenLite.ticker.useRAF(false);
+      TweenLite.lagSmoothing(0);
+      var delayTxt = 0;
+      var tl = new TimelineLite();
+
+      tl.from("#mega01", 0.8, {autoAlpha: 0, scale: 0.3, x: -400})
+        .from("#txt01", 0.8, {autoAlpha: 0, scale: 0.5, x: -300}, '-=0.2')
+        .to("#bg", 0.6, {backgroundPosition: "top center"}, 2)
+        .to("#mega01", 0.6, {scale: 0.8, x: 87}, '-=0.6')
+        .to("#txt01", 0.6, {scale: 0.8, x: 40}, '-=0.6')
+        .from("#pack01", 0.5, {scale: 0.3, x: -20, autoAlpha: 0}, '-=0.3')
+        .from("#pack02", 0.6, {scale: 0.3, x: 50, y: -20, autoAlpha: 0}, '-=0.1')
+        .to("#txt01", 0.5, {y: 100})
+        .from("#txt02", 0.5, {y: -100}, '-=0.6')
+        .to("#txt02", 0.5, {scale: 1.3, x: 20})
+        .to("#txt02", 0.4, {scale: 1, x: 0}, '-=0.3')
+        .from("#strawberry", 0.8, {scale: 0.3, autoAlpha: 0, x: -50}, '-=0.3')
+        .from("#mint", 0.6, {scale: 0.2, autoAlpha: 0, x: -60}, '-=0.6')
+        .to("#mega01", 0.6, { x: 60}, '+=1')
+        .to("#txt02", 0.5, {y: 100}, '-=0.5')
+        .from("#txt03", 0.5, {y: -100}, '-=0.5')
+        .to("#strawberry", 0.3, {scale: 1.05, y: -18, x: 16}, '-=0.2')
+        .to("#mint", 0.3, {scale: 1.05, y:18, x: 11}, '-=0.3')
+        .to("#pack01", 0.4, {scale: 0.9, x: -8, y: -4})
+        .to("#pack02", 0.4, {scale: 0.9, x: 14}, '-=0.3')
+        .from("#gum01", 0.4, {scale: 0.2, x: -20, autoAlpha: 0}, '-=0.2')
+        .from("#gum02", 0.4, {scale: 0.2, x: 20, autoAlpha: 0})
+        .from("#schirm", 0.4, {height: 0, autoAlpha: 0}, '+=1');
+   });
+  </script>
+</head>
+<body>
+  <a href="javascript:window.open(window.clickTag)" target="_blank">
+    <div class="container">
+      <div id="bg" class="el"></div>
+      <div id="txt01" class="el">
+        <img src="txt01.svg">
+      </div>
+      <div id="mega01" class="el">
+        <img src="mega.svg">
+      </div>
+      <div id="pack01" class="el">
+        <img src="pack01.png">
+      </div>
+      <div id="pack02" class="el">
+        <img src="pack02.png">
+      </div>
+      <div id="txt03" class="el">
+        <img src="txt03.svg">
+      </div>
+      <div id="mint" class="el">
+        <img src="mint.png">
+      </div>
+      <div id="txt02" class="el">
+        <img src="txt02.svg">
+      </div>       
+      <div id="strawberry" class="el">
+        <img src="strawberry.png">
+      </div>
+      <div id="gum01" class="el">
+        <img src="gum01.png">
+      </div>
+      <div id="gum02" class="el">
+        <img src="gum02.png">
+      </div>
+      <div id="schirm" class="el"></div>
+      <!--      <div id="mega02" class="el">
+        <img src="mega.svg">
+      </div>
+
+      <div id="mega03" class="el">
+        <img src="mega.svg">
+      </div>
+ 
+ -->
+      <div id="frame"></div>
+    </div>
+  </a>
+</body>
