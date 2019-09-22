@@ -7,14 +7,16 @@
   <script src="https://s0.2mdn.net/ads/studio/cached_libs/easepack_2.0.1_min.js"></script>
   <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenlite_2.0.1_min.js"></script>
   <script src="https://s0.2mdn.net/ads/studio/cached_libs/cssplugin_2.0.1_min.js"></script>
-  <script src="https://s0.2mdn.net/ads/studio/cached_libs/timelinelite_2.0.1_min.js"></script>
+  <!-- <script src="https://s0.2mdn.net/ads/studio/cached_libs/timelinelite_2.0.1_min.js"></script> -->
+  <script src="https://s0.2mdn.net/ads/studio/cached_libs/
+timelinemax_1.19.0_4cba7b163d6263b39d53727ed4c7bb6f_min.js"></script>
   <script type="text/javascript">
     var clickTag = "#"; 
     document.addEventListener("DOMContentLoaded", function(event) { 
       TweenLite.ticker.useRAF(false);
       TweenLite.lagSmoothing(0);
       var delayTxt = 0;
-      var tl = new TimelineLite();
+      var tl = new TimelineMax({ repeat: 2, repeatDelay: 2.5});
 
       tl.from("#mega01", 0.8, {autoAlpha: 0, scale: 0.3, x: -400})
         .from("#txt01", 0.8, {autoAlpha: 0, scale: 0.5, x: -300}, '-=0.2')
@@ -37,8 +39,7 @@
         .to("#pack01", 0.4, {scale: 0.9, x: -8, y: -4})
         .to("#pack02", 0.4, {scale: 0.9, x: 14}, '-=0.3')
         .from("#gum01", 0.4, {scale: 0.2, x: -20, autoAlpha: 0}, '-=0.2')
-        .from("#gum02", 0.4, {scale: 0.2, x: 20, autoAlpha: 0})
-        .from("#schirm", 0.4, {height: 0, autoAlpha: 0}, '+=1');
+        .from("#gum02", 0.4, {scale: 0.2, x: 20, autoAlpha: 0});
    });
   </script>
 </head>
@@ -76,16 +77,6 @@
       <div id="gum02" class="el">
         <img src="gum02.png">
       </div>
-      <div id="schirm" class="el"></div>
-      <!--      <div id="mega02" class="el">
-        <img src="mega.svg">
-      </div>
-
-      <div id="mega03" class="el">
-        <img src="mega.svg">
-      </div>
- 
- -->
       <div id="frame"></div>
     </div>
   </a>
