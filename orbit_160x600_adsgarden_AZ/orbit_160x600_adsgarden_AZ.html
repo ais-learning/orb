@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta name="ad.size" content="width=160,height=600">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://s0.2mdn.net/ads/studio/cached_libs/easepack_2.0.1_min.js"></script>
+  <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenlite_2.0.1_min.js"></script>
+  <script src="https://s0.2mdn.net/ads/studio/cached_libs/cssplugin_2.0.1_min.js"></script>
+  <script src="https://s0.2mdn.net/ads/studio/cached_libs/timelinemax_2.0.1_min.js"></script>
+  <script type="text/javascript">
+    var clickTag = "#"; 
+    document.addEventListener("DOMContentLoaded", function(event) { 
+      TweenLite.ticker.useRAF(false);
+      TweenLite.lagSmoothing(0);
+      var delayTxt = 0;
+      var tl = new TimelineMax({ repeat: 2, repeatDelay: 2.5});
+
+      tl.from("#bg", 0.6, {backgroundSize: "192px 720px"})
+        .from("#mega01", 0.6, {autoAlpha: 0, scale: 0.3, y: 200}, '-=0.6')
+        .from("#txt01", 0.4, {autoAlpha: 0, scale: 0.5, y: 250}, '-=0.2')
+        .from("#pack01", 0.5, {scale: 0.3, x: -20, autoAlpha: 0}, '-=0.3')
+        .from("#pack02", 0.6, {scale: 0.3, x: 50, y: -20, autoAlpha: 0}, '-=0.1')
+        .to("#txt01", 0.5, {x: 200})
+        .from("#txt02", 0.5, {x: -200}, '-=0.6')
+        .to("#pack01", 0.2, {y: 60}, '-=0.2')
+        .to("#pack02", 0.2, {y: 60}, '-=0.2')
+        .from("#strawberry02", 0.8, {scale: 0.3, autoAlpha: 0, y: 80, x: 60, rotation: -120}, '-=0.3')
+        .from("#mint02", 0.8, {scale: 0.2, autoAlpha: 0, x: 40, y: -80, rotation: -180}, '-=0.4')
+        .from("#mint01", 0.6, {scale: 0.2, autoAlpha: 0, x: 60, y: -50, rotation: -180}, '-=0.6')
+        .to("#txt02", 0.3, {scale: 1.3})
+        .to("#txt02", 0.3, {scale: 1})
+        .from("#strawberry01", 0.6, {scale: 0.3, autoAlpha: 0, y: 100, x: -60, rotation: -120}, '-=0.3')
+        .from("#mint03", 0.6, {scale: 0.2, autoAlpha: 0, x: -60, y: -50, rotation: -180}, '-=0.6')
+        .to("#txt02", 0.5, {x: 200}, '+=0.8')
+        .from("#txt03", 0.5, {x: -200}, '-=0.5')
+        .from("#gum01", 0.4, {scale: 0.2, x: -20, y: 60, autoAlpha: 0}, '-=0.2')
+        .from("#gum02", 0.4, {scale: 0.2, x: 20, y: -80, autoAlpha: 0})
+        ;
+   });
+  </script>
+</head>
+<body>
+  <a href="javascript:window.open(window.clickTag)" target="_blank">
+    <div class="container">
+      <div id="bg" class="el"></div>
+      <div id="txt01" class="el">
+        <img src="txt01.svg">
+      </div>
+      <div id="mega01" class="el">
+        <img src="mega.svg">
+      </div>
+      <div id="mint03" class="el">
+        <img src="mint03.png">
+      </div>
+      <div id="pack01" class="el">
+        <img src="pack01.png">
+      </div>
+      <div id="pack02" class="el">
+        <img src="pack02.png">
+      </div>
+      <div id="strawberry02" class="el">
+        <img src="strawberry02.png">
+      </div>
+      <div id="mint02" class="el">
+        <img src="mint02.png">
+      </div>
+      <div id="mint01" class="el">
+        <img src="mint01.png">
+      </div>
+      <div id="txt03" class="el">
+        <img src="txt03.svg">
+      </div>
+      <div id="txt02" class="el">
+        <img src="txt02.svg">
+      </div>      
+      <div id="gum01" class="el">
+        <img src="gum01.png">
+      </div>
+      <div id="gum02" class="el">
+        <img src="gum02.png">
+      </div> 
+      <div id="strawberry01" class="el">
+        <img src="strawberry01.png">
+      </div>
+    </div>
+  </a>
+</body>
